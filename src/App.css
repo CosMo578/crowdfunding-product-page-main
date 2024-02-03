@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700;&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Commissioner", sans-serif;
+}
+
+:root {
+  --Moderate-cyan: #3cb4ac;
+  --Dark-cyan: #147b74;
+  --Black: hsl(0, 0%, 0%);
+  --Dark-gray: #7a7a7a;
+}
+
+button {
+  @apply cursor-pointer outline-none;
+  filter: brightness();
+}
+
+input[type="range"] {
+  @apply rounded-full;
+}
+
+input[type="range"]::-moz-range-track,
+input[type="range"]::-moz-range-progress {
+  @apply h-full w-full overflow-hidden rounded-full;
+}
+
+input[type="range"]::-moz-range-thumb {
+  visibility: hidden;
+}
+
+input[type="range"]::-moz-range-progress {
+  @apply bg-[#3cb4ac];
+}
+
+input[type="range"]::-moz-range-track {
+  @apply bg-gray-300;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  @apply z-[-2] h-full w-full overflow-hidden rounded-full bg-gray-300;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-full rounded-full  bg-[#3cb4ac];
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-full w-10 appearance-none rounded-full  bg-[#3cb4ac];
+}
+
+/* * {
+  border: 1px solid red;
+} */
+
+.modal {
+  box-shadow: 0px 10px 100vw 900px rgb(0 0 0 /0.6);
+}
