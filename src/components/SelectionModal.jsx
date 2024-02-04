@@ -48,7 +48,7 @@ export function SelectionModal({
         <button onClick={() => setIsModalOpen((prev) => !prev)}>
           <img
             className="scale-[1.3]"
-            src="/images/icon-close-modal.svg"
+            src="./images/icon-close-modal.svg"
             alt=""
           />
         </button>

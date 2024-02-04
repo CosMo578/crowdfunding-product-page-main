@@ -1,5 +1,3 @@
-import bgImage from "/images/image-hero-desktop.jpg";
-
 import { Header } from "./components/Header";
 import { FirstSection } from "./components/FirstSection";
 import { SecondSection } from "./components/SecondSection";
@@ -41,7 +39,7 @@ function App() {
   return (
     <>
       <img
-        src={bgImage}
+        src="./images/image-hero-desktop.jpg"
         className="absolute left-0 right-0 top-0 z-[-1] w-full"
       />
       <Header />
