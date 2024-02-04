@@ -1,3 +1,4 @@
+import Image from "/images/icon-close-modal.svg";
 export function SelectionModal({
   bambooStand,
   // setBambooStand,
@@ -48,7 +49,7 @@ export function SelectionModal({
         <button onClick={() => setIsModalOpen((prev) => !prev)}>
           <img
             className="scale-[1.3]"
-            src="./images/icon-close-modal.svg"
+            src={Image}
             alt=""
           />
         </button>

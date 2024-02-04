@@ -1,4 +1,6 @@
 import masterCraft from '/images/logo-mastercraft.svg';
+import Bookmark from "/images/icon-bookmark.svg";
+import Bookmarked from "/images/icon-bookmarked.svg";
 
 import { useState } from "react";
 
@@ -29,7 +31,7 @@ export function FirstSection({setIsModalOpen}) {
         >
           <img
             className="inline"
-            src={bookmark === 'Bookmark' ? "/images/icon-bookmark.svg" : "./images/icon-bookmarked.svg"}
+            src={bookmark === 'Bookmark' ? Bookmark : Bookmarked }
             alt=""
           />
           <span className={`py-4 pl-3 pr-6 font-semibold ${bookmark === 'Bookmark' ?  'text-[#7a7a7a]' :' text-[#3cb4ac]'} `}>

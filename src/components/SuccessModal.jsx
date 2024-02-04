@@ -1,10 +1,11 @@
+import Image from "/images/icon-check.svg";
 export function SuccessModal() {
   return (
     <div className="grid h-screen w-[100vw] place-items-center items-center bg-[#7a7a7a67]">
       <div className="w-[40vw] rounded-lg bg-white p-10 text-center">
         <img
           className="static mx-auto mb-10 h-auto w-[100px]"
-          src="./images/icon-check.svg"
+          src={Image}
           alt=""
         />
         <h2 className="mb-4 text-2xl font-semibold">
