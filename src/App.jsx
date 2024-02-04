@@ -8,21 +8,23 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [bambooStand, setBambooStand] = useState(101);
+  const [blackEdition, setBlackEdition] = useState(64);
   const pricing = [
     {
       h3: "Bamboo Stand",
       pledge: "Pledge $25 or more",
-      p: `You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.`,
-      qty: "101",
+      p: `You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special
+       Backer member list.`,
+      qty: `${bambooStand}`,
       btn: "Select Reward",
     },
     {
       h3: "Black Edition Stand",
       pledge: "Pledge $75 or more",
       p: `You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.`,
-      qty: "64",
+      qty: `${blackEdition}`,
       btn: "Select Reward",
     },
     {
@@ -42,14 +44,20 @@ function App() {
       />
       <Header />
 
-      <main className="mx-auto mb-28 mt-40 w-[50vw] max-w-[50vw]">
+      <main className="w-full p-6 lg:mx-auto mb-28 mt-40 lg:w-[50vw] lg:max-w-[50vw]">
         <FirstSection setIsModalOpen={setIsModalOpen} />
         <SecondSection />
         <ThirdSection pricing={pricing} />
       </main>
-      {isModalOpen &&
-      <SelectionModal setIsModalOpen={setIsModalOpen} />
-      }
+      {isModalOpen && (
+        <SelectionModal
+          bambooStand={bambooStand}
+          setBambooStand={setBambooStand}
+          blackEdition={blackEdition}
+          setBlackEdition={setBlackEdition}
+          setIsModalOpen={setIsModalOpen}
+        />
+      )}
     </>
   );
 }

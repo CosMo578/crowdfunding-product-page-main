@@ -1,23 +1,28 @@
-export function SelectionModal({ setIsModalOpen }) {
+export function SelectionModal({
+  bambooStand,
+  // setBambooStand,
+  blackEdition,
+  // setBlackEdition,
+  setIsModalOpen,
+}) {
   const plans = [
     {
       h3: "Pledge with no reward",
       pledge: "",
-      p: `
-          Choose to support us without a reward if you simply believe in our
-          project. As a backer, you will be signed up to receive product updates
-          via email.`,
+      p: `Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.`,
     },
     {
       h3: "Bamboo Stand",
       pledge: "Pledge $25 or more",
-      qty: 101,
+      qty: `${ bambooStand }`,
+      price: 25,
       p: `You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.`,
     },
     {
       h3: "Black Edition Stand",
       pledge: "Pledge $75 or more",
-      qty: 64,
+      qty: `${ blackEdition }`,
+      price: 75,
       p: `You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
           `,
     },
@@ -32,8 +37,8 @@ export function SelectionModal({ setIsModalOpen }) {
   ];
 
   function handleSubmit(e) {
-    e.preventDefault()
-    setIsModalOpen((prev) => !prev)
+    e.preventDefault();
+    setIsModalOpen((prev) => !prev);
   }
 
   return (
@@ -92,9 +97,10 @@ export function SelectionModal({ setIsModalOpen }) {
                 <p className="text-[#7a7a7a]">Enter your pledge</p>
                 <form onSubmit={handleSubmit}>
                   <input
-                    type="number"
                     className="mr-4 h-[50px] w-[98.05px] rounded-full border border-[#3cb4ac] p-4 focus:outline-none"
                     min={data.qty}
+                    required
+                    value={data.price}
                   />
                   <button
                     type="submit"

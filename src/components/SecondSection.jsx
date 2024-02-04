@@ -18,7 +18,7 @@ export function SecondSection() {
         </p>
       </div>
       <input
-        className="mt-6 w-full bg-[#3cb4ac] outline-none"
+        className="hover:animate-pulse  mt-6 w-full bg-[#3cb4ac] outline-none"
         type="range"
         value="70"
       />
