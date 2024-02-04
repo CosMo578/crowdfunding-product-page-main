@@ -4,7 +4,7 @@ export function SuccessModal() {
       <div className="w-[40vw] rounded-lg bg-white p-10 text-center">
         <img
           className="static mx-auto mb-10 h-auto w-[100px]"
-          src="./images/icon-check.svg"
+          src="/images/icon-check.svg"
           alt=""
         />
         <h2 className="mb-4 text-2xl font-semibold">

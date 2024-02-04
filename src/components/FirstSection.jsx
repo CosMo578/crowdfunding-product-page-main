@@ -1,3 +1,5 @@
+import masterCraft from '/images/logo-mastercraft.svg';
+
 import { useState } from "react";
 
 export function FirstSection({setIsModalOpen}) {
@@ -7,7 +9,7 @@ export function FirstSection({setIsModalOpen}) {
     <section className="relative mb-8 rounded-lg bg-white px-10 pb-10 pt-14">
       <img
         className="absolute -top-6 left-1/2 -translate-x-1/2"
-        src="./images/logo-mastercraft.svg"
+        src={masterCraft}
         alt=""
       />
       <h1 className="mb-2 text-center text-2xl font-bold text-black">
@@ -27,7 +29,7 @@ export function FirstSection({setIsModalOpen}) {
         >
           <img
             className="inline"
-            src={bookmark === 'Bookmark' ? "./images/icon-bookmark.svg" : "./images/icon-bookmarked.svg"}
+            src={bookmark === 'Bookmark' ? "/images/icon-bookmark.svg" : "/images/icon-bookmarked.svg"}
             alt=""
           />
           <span className={`py-4 pl-3 pr-6 font-semibold ${bookmark === 'Bookmark' ?  'text-[#7a7a7a]' :' text-[#3cb4ac]'} `}>
